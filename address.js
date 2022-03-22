@@ -537,8 +537,7 @@
     };
 
     Addr_Match.number = '(?<number>(\\d+)(\\S*))';
-    //Addr_Match.number = '(?<number>(\\d+-?\\d*)|([N|S|E|W]\\d{1,3}[N|S|E|W]\\d{1,6}))(?=\\D)';
-
+    
     Addr_Match.street = '                                       \n\
       (?:                                                       \n\
         (?:(?<street_0>'+Addr_Match.direct+')\\W+               \n\
