@@ -536,7 +536,11 @@
       corner  : '(?:\\band\\b|\\bat\\b|&|\\@)',
     };
 
-    Addr_Match.number = '(?<number>(\\d+-?\\d*)|([N|S|E|W]\\d{1,3}[N|S|E|W]\\d{1,6}))(?=\\D)';
+    // Modified the Addr_Match.number to accept alphabet along with number for parsing street address
+    // [keeping original code for reference] 
+    // Addr_Match.number = '(?<number>(\\d+-?\\d*)|([N|S|E|W]\\d{1,3}[N|S|E|W]\\d{1,6}))(?=\\D)';
+    Addr_Match.number = '(?<number>(\\d+)(\\S*))';
+
 
     Addr_Match.street = '                                       \n\
       (?:                                                       \n\
